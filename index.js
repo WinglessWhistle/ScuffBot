@@ -62,7 +62,7 @@ client.on('message', msg => {
 // !minecraft
 client.on('message', msg => {
   if (msg.content === '!minecraft') {
-    msg.reply('IP for the server coming soon! Hosted using Battlecraft. https://discord.battlecraft.network');
+    msg.reply('IP for the server coming soon! Hosted By Battlecraft. https://discord.battlecraft.network');
   }
 });
 
