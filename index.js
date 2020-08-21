@@ -31,17 +31,10 @@ client.on('message', msg => {
   }
 });
 
-// hello
-client.on('message', msg => {
-  if (msg.content === 'hello') {
-    msg.reply('Hi!');
-  }
-});
-
 // !invite
 client.on('message', msg => {
   if (msg.content === '!invite') {
-    msg.reply('Soon™');
+    msg.channel.send('Soon™');
   }
 });
 
@@ -49,14 +42,14 @@ client.on('message', msg => {
 client.on('message', message => {
   if (message.content === '!avatar') {
     message.reply('This link takes you to your discord avatar.');
-    message.reply(message.author.displayAvatarURL());
+    message.channel.send(message.author.displayAvatarURL());
   }
 });
 
 // !commands
 client.on('message', msg => {
   if (msg.content === '!commands') {
-    msg.reply('!ping, !invite, !avatar, !minecraft & !commands');
+    msg.channel.send('!ping, !invite, !avatar, !minecraft & !commands');
   }
 });
 
@@ -64,7 +57,7 @@ client.on('message', msg => {
 client.on('message', msg => {
     if (msg.channel.id === '742389792150388907') {
         if (msg.content === '!minecraft')
-        msg.reply('The JAVA Minecraft server is on 1.16.1 and the IP address is: atg.mc.gg! Hosted By Battlecraft. https://discord.battlecraft.network');
+        msg.channel.send('The JAVA Minecraft server is on 1.16.1 and the IP address is: atg.mc.gg! Hosted By Battlecraft. https://discord.battlecraft.network');
     }
 });
 
