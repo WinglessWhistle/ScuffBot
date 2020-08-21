@@ -63,7 +63,7 @@ client.on('message', msg => {
 client.on('message', msg => {
     if (msg.channel.id === '742389792150388907') {
         if (msg.content === '!minecraft')
-        msg.reply('DM Wingless and tell him to add the ip on stream start! Hosted By Battlecraft. https://discord.battlecraft.network');
+        msg.reply('The JAVA Minecraft server is on 1.16.1 and the IP address is: ats.mc.gg! Hosted By Battlecraft. https://discord.battlecraft.network');
     }
 });
 
