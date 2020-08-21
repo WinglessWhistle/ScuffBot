@@ -55,10 +55,9 @@ client.on('message', msg => {
 
 // !minecraft
 client.on('message', msg => {
-    if (msg.channel.id === '742389792150388907') {
-        if (msg.content === '!minecraft')
-        msg.channel.send('The JAVA Minecraft server is on 1.16.1 and the IP address is: atg.mc.gg! Hosted By Battlecraft. https://discord.battlecraft.network');
-    }
+  if (msg.content === '!minecraft') {
+    msg.channel.send('Sorry, this server is now offline. If you played previously you may still be able to.');
+  }
 });
 
 // Bot Token
