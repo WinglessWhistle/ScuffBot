@@ -48,6 +48,7 @@ client.on('message', msg => {
 // !avatar
 client.on('message', message => {
   if (message.content === '!avatar') {
+    message.reply('This link takes you to your discord avatar.');
     message.reply(message.author.displayAvatarURL());
   }
 });
