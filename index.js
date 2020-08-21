@@ -61,9 +61,10 @@ client.on('message', msg => {
 
 // !minecraft
 client.on('message', msg => {
-  if (msg.content === '!minecraft') {
-    msg.reply('IP for the server coming soon! Hosted By Battlecraft. https://discord.battlecraft.network');
-  }
+    if (msg.channel.id === '742389792150388907') {
+        if (msg.content === '!minecraft')
+        msg.reply('DM Wingless and tell him to add the ip on stream start! Hosted By Battlecraft. https://discord.battlecraft.network');
+    }
 });
 
 // Bot Token
