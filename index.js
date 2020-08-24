@@ -2,9 +2,9 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
-app.get('/', (req, res) => res.send('Literally just here to fill in the empty page from hosting ScuffBot'));
+app.get('/', (req, res) => res.send('El Scuffo. Reporting for duty!'));
 
-app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`));
+app.listen(port, () => console.log(`ScuffBot Active on -  http://localhost:${port}`));
 
 // ================= START BOT CODE ===================
 const Discord = require('discord.js');
@@ -27,21 +27,21 @@ client.user.setPresence({
 // !ping
 client.on('message', msg => {
   if (msg.content === '!ping') {
-    msg.reply('pong!');
+    msg.channel.send('client.ping');
   }
 });
 
 // !invite
 client.on('message', msg => {
   if (msg.content === '!invite') {
-    msg.channel.send('Soon™');
+    msg.channel.send('Add ScuffBot Via This Handy Link! http://bit.ly/ScuffBotInvite');
   }
 });
 
 // !avatar
 client.on('message', message => {
   if (message.content === '!avatar') {
-    message.reply('This link takes you to your discord avatar.');
+    message.chan('Here is your avatar!');
     message.channel.send(message.author.displayAvatarURL());
   }
 });
@@ -57,6 +57,21 @@ client.on('message', msg => {
 client.on('message', msg => {
   if (msg.content === '!minecraft') {
     msg.channel.send('Sorry, this server is now offline. If you played previously you may still be able to.');
+  }
+});
+
+//!test
+client.on('message', msg => {
+  if (msg.content === '!test') {
+    msg.channel.send('Test Sent Via DMs!');
+    msg.author.send("If you recieved this be happy wingless learnt how to make el scuffo send dms")
+  }
+});
+
+// !yoshi
+client.on('message', msg => {
+  if (msg.content === '!yoshi') {
+    msg.channel.send('Coming Soon!.');
   }
 });
 
