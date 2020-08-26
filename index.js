@@ -60,18 +60,18 @@ client.on('message', msg => {
   }
 });
 
-//!test
+//!sync
 client.on('message', msg => {
-  if (msg.content === '!test') {
-    msg.channel.send('Test Sent Via DMs!');
-    msg.author.send("If you recieved this be happy wingless learnt how to make el scuffo send dms")
+  if (msg.content === '!sync') {
+    msg.channel.send('Instructions sent to you in DMs!');
+    msg.author.send("Please run the command `%^syncme` in ScuffBots dms")
   }
 });
 
-// !yoshi
+//%^syncme
 client.on('message', msg => {
-  if (msg.content === '!yoshi') {
-    msg.channel.send('Coming Soon!.');
+  if (msg.content === '%^syncme') {
+    msg.author.send('$user.discordApi.Bot scuffbot.storage.sync404')
   }
 });
 
