@@ -56,25 +56,12 @@ client.on('message', msg => {
 // !minecraft
 client.on('message', msg => {
   if (msg.content === '!minecraft') {
-    msg.channel.send('Sorry, this server is now offline. If you played previously you may still be able to.');
+    msg.channel.send('Java 1.16.1 - robin.mc.gg');
   }
 });
 
-//!sync
-client.on('message', msg => {
-  if (msg.content === '!sync') {
-    msg.channel.send('Instructions sent to you in DMs!');
-    msg.author.send("Please run the command `%^syncme` in ScuffBots dms")
-  }
-});
-
-//%^syncme
-client.on('message', msg => {
-  if (msg.content === '%^syncme') {
-    msg.author.send('$user.discordApi.Bot scuffbot.storage.sync404')
-  }
-});
 
 // Bot Token
 
 client.login(process.env.DISCORD_TOKEN);
+
