@@ -39,10 +39,10 @@ client.on('message', msg => {
 });
 
 // !avatar
-client.on('message', message => {
-  if (message.content === '!avatar') {
-    message.chan('Here is your avatar!');
-    message.channel.send(message.author.displayAvatarURL());
+client.on('message', msg => {
+  if (msg.content === '!avatar') {
+    msg.reply('Here is your avatar!');
+    msg.channel.send(msg.author.displayAvatarURL());
   }
 });
 
