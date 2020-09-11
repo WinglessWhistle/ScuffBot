@@ -25,9 +25,9 @@ client.user.setPresence({
 // Bot Commands
 
 // !ping
-client.on('message', msg => {
-  if (msg.content === '!ping') {
-    msg.channel.send('Temperarily Disabled');
+client.on('message', message => {
+  if (message.content === '!ping') {  
+    message.channel.send(`Your latency is ${Date.now() - message.createdTimestamp}ms. APIs Latency is ${Math.round(client.ws.ping)}ms`);
   }
 });
 
@@ -66,6 +66,8 @@ client.on('message', msg => {
     msg.channel.send('yikes indeed.');
   }
 });
+
+
 
 // Bot Token
 
