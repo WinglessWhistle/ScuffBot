@@ -14,7 +14,7 @@ client.on("ready", () => {
 client.user.setPresence({
     status: 'online',
     activity: {
-        name: 'Made by Wingless',
+        name: 'Robin Sucks',
         type: 'STREAMING',
         url: 'https://www.twitch.tv/WinglessWhistle'
     }
@@ -27,7 +27,7 @@ client.user.setPresence({
 // !ping
 client.on('message', msg => {
   if (msg.content === '!ping') {
-    msg.channel.send('client.ping');
+    msg.channel.send('Temperarily Disabled');
   }
 });
 
@@ -60,6 +60,12 @@ client.on('message', msg => {
   }
 });
 
+// !@#$%^&*()yikes
+client.on('message', msg => {
+  if (msg.content === '!@#$%^&*()yikes') {
+    msg.channel.send('yikes indeed.');
+  }
+});
 
 // Bot Token
 
