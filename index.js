@@ -2,9 +2,9 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
-app.get('/', (req, res) => res.send('El Scuffo. Reporting for duty!'));
+app.get('/', (req, res) => res.send('ScuffBot active!'));
 
-app.listen(port, () => console.log(`ScuffBot Active on -  http://localhost:${port}`));
+app.listen(port, () => console.log(`ScuffBot Active on - http://localhost:${port}`));
 
 // ================= START BOT CODE ===================
 const Discord = require('discord.js');
