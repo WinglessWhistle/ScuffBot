@@ -60,6 +60,17 @@ client.on('message', msg => {
   }
 });
 
+// "robin sucks"
+client.on('message', msg => {
+  if (msg.content === 'robin sucks') {
+    msg.react('🇹');
+    msg.react('🇷');
+    msg.react('🇺');
+    msg.react('🇪');
+  }
+});
+
+
 // !@#$%^&*()yikes
 client.on('message', msg => {
   if (msg.content === '!@#$%^&*()yikes') {
