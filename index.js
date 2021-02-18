@@ -14,9 +14,9 @@ client.on("ready", () => {
 client.user.setPresence({
     status: 'online',
     activity: {
-        name: 'Robin Sucks',
+        name: 'Wingless > Robin',
         type: 'STREAMING',
-        url: 'https://www.twitch.tv/WinglessWhistle'
+        url: 'https://www.twitch.tv/redr0binhood'
     }
 })
 
@@ -24,9 +24,10 @@ client.user.setPresence({
 
 // Bot Commands
 
-// !ping
+// scuff!ping
 client.on('message', message => {
-  if (message.content === '!ping') {  
+  if (message.content === 'scuff!ping') {  
+        message.react('🏓');
     message.channel.send(`Your latency is ${Date.now() - message.createdTimestamp}ms. APIs Latency is ${Math.round(client.ws.ping)}ms`);
   }
 });
@@ -41,6 +42,7 @@ client.on('message', msg => {
 // !avatar
 client.on('message', msg => {
   if (msg.content === '!avatar') {
+    msg.react('📷');
     msg.reply('Here is your avatar!');
     msg.channel.send(msg.author.displayAvatarURL());
   }
@@ -50,13 +52,6 @@ client.on('message', msg => {
 client.on('message', msg => {
   if (msg.content === '!commands') {
     msg.channel.send('!ping, !invite, !avatar, !minecraft & !commands');
-  }
-});
-
-// !minecraft
-client.on('message', msg => {
-  if (msg.content === '!minecraft') {
-    msg.channel.send('Java 1.16.1 - robin.mc.gg');
   }
 });
 
@@ -70,15 +65,26 @@ client.on('message', msg => {
   }
 });
 
-
-// !@#$%^&*()yikes
+// !yoshi
 client.on('message', msg => {
-  if (msg.content === '!@#$%^&*()yikes') {
+  if (msg.content === '!yoshi') {
+    msg.channel.send('╰(*°▽°*)╯ Yoshi Indeed!');
+  }
+});
+
+// yikes
+client.on('message', msg => {
+  if (msg.content === 'yikes') {
     msg.channel.send('yikes indeed.');
   }
 });
 
-
+// "🦞"
+client.on('message', msg => {
+  if (msg.content === '🦞') {
+    msg.react('🦞');
+  }
+});
 
 // Bot Token
 
